@@ -1,12 +1,16 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace ExpMVCnetCoreSaleNoAuthent.Controllers
 {
-    interface BaseController
+    public class BaseController : Controller
     {
-        public 
+        public BaseController()
+        {
+            //ViewBag.User = JsonConvert.DeserializeObject<UserViewModel>(JsonConvert.SerializeObject(new UserController().Details(1)));
+        }
     }
 }

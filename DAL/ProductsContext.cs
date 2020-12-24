@@ -19,13 +19,13 @@ namespace ExpMVCnetCoreSaleNoAuthent.DAL
         {
             Configuration = configuration;
         }
-        public User User { get; set; }
-        public Quyen Quyen { get; set; }
-        public Category Category { get; set; }
-        public Stock Stock { get; set; }
-        public Store Store { get; set; }
-        public Productor Productor { get; set; }
-        public Product Product { get; set; }
+        public DbSet<UserModel> User { get; set; }
+        public DbSet<QuyenModel> Quyen { get; set; }
+        public DbSet<CategoryModel> Category { get; set; }
+        public DbSet<StockModel> Stock { get; set; }
+        public DbSet<StoreModel> Store { get; set; }
+        public DbSet<ProductorModel> Productor { get; set; }
+        public DbSet<ProductModel> Product { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(Configuration["Connection"]);
